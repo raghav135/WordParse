@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "Item.h"
 
+Item::Item()
+{
+	_c = '\0';
+}
+
 Item::Item(char c)
 {
 	_c = c;
@@ -29,4 +34,16 @@ void Item::setComplete()
 bool Item::isComplete()
 {
 	return 0x80 & _c;
+}
+
+Item& Item::operator=(const Item& in)
+{
+	_c = in._c;
+	return *this;
+}
+
+
+ostream& operator<<(ostream& os, const Item& in) {
+	os << in.get();
+	return os;
 }

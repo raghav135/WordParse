@@ -11,6 +11,10 @@ Item::Item(char c)
 	_c = c;
 }
 
+// store two information in this char (_c)
+// store the character (a-z)
+// In the Most significant bit, store if with this item, there is a word in the tree.
+
 char Item::get() const
 {
 	return 0x7F & _c;

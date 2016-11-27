@@ -6,6 +6,7 @@
 #include <fstream>
 #include <string>
 #include "Tree.h"
+#include "Item.h"
 using namespace std;
 
 int main()
